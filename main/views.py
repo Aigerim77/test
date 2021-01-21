@@ -22,3 +22,4 @@ def first1(request):
 
 def first2(request):
     return HttpResponse('Ваша запись была удалена')
+
