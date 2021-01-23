@@ -51,11 +51,11 @@ section{
     
 
 .todo_item{
-    border: 1px solid grey;
+    border: 1px solid rgb(201, 17, 17);
     border-radius: 5px;
     width: 24%;
     padding: 10px 15px;
-    background-color: #c0e0c9;
+    background-color: #169139;
     margin-bottom: 20px;
 
 }
