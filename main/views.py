@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from .models import ToDo
 
 def homepage(request):
@@ -28,4 +28,9 @@ def add_todo(request):
     text = form["todo_text"]
     todo = ToDo(text=text)
     todo.save()
-    return HttpResponse('форма получена')
+    return redirect(test)
+
+def delete_todo(request, id):
+    todo = ToDo.objects.get(id=id)
+    todo.delete()
+    return redirect(test)    
