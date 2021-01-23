@@ -25,5 +25,7 @@ def first2(request):
 
 def add_todo(request):
     form = request.POST
-    print(form)
+    text = form["todo_text"]
+    todo = ToDo(text=text)
+    todo.save()
     return HttpResponse('форма получена')

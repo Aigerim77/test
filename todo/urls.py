@@ -28,6 +28,6 @@ urlpatterns = [
     path('page1/', first),
     path('page2/', first1),
     path('page3/', first2),
-    path("add-todo/", add_todo),
+    path("add-todo/", add_todo, name="add-todo"),
  ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
     + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
