@@ -23,3 +23,7 @@ def first1(request):
 def first2(request):
     return HttpResponse('Ваша запись была удалена')
 
+def add_todo(request):
+    form = request.POST
+    print(form)
+    return HttpResponse('форма получена')
