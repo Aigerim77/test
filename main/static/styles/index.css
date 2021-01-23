@@ -73,6 +73,9 @@ section{
     font-family: sans-serif;
 }
 
+.todo_item.header h4{
+    text-decoration: none;
+}
 .todo_item.footer{
     display: flex;
     justify-self: space-between;

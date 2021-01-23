@@ -43,6 +43,12 @@ def marked_todo(request, id):
 
 def unmarked_todo(request, id):
     todo = ToDo.objects.get(id=id)
-    todo.is_closed = True
+    todo.is_favorite = True
     todo.save()
     return redirect(test)        
+
+def close_todo(request, id):
+    todo = ToDo.objects.get(id=id)
+    todo.is_closed = not todo.is_closed
+    todo.save()
+    return redirect(test) 
